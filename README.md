@@ -1,3 +1,5 @@
+[![Vercel Production Deployment](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml)
+
 > This is resolution of the [ProjectMark challenge][requirements]
 
 This project is hosted on [vercel][vercel-project].
