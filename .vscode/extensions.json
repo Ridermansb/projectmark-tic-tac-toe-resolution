@@ -5,6 +5,7 @@
     "usernamehw.errorlens",
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
-    "vitest.explorer"
+    "vitest.explorer",
+    "Vue.volar"
   ]
 }
