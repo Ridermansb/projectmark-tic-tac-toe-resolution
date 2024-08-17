@@ -1,7 +1,6 @@
 {
   "name": "projectmark-tic-tac-toe-resolution",
-  "version": "1.0.0",
-  "main": "app.js",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -32,6 +31,7 @@
     "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "vite": "^5.4.1",
+    "vite-plugin-vue-devtools": "^7.3.8",
     "vitest": "^2.0.5"
   }
 }
