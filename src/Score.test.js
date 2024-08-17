@@ -1,13 +1,13 @@
-import { ref } from "vue";
+import { reactive } from "vue";
 import { mount } from "@vue/test-utils";
 import Score from "./Score.vue";
-import { key } from "./useStore";
+import { store, key } from "./useStore";
 
-function factory({ store, ...options } = { store: { victoriesPlayer1: 0, victoriesPlayer2: 0 } }) {
+function factory({ store: extraStoreOptions, ...options } = { store: {} }) {
   return mount(Score, {
     global: {
       provide: {
-        [key]: ref(store),
+        [key]: reactive({ ...store, ...extraStoreOptions }),
       },
     },
     ...options,
@@ -28,4 +28,15 @@ test("<Score> should match scores within store", () => {
   });
   expect(wrapper.findAll(".victories")[0].text()).toContain("98");
   expect(wrapper.findAll(".victories")[1].text()).toContain("1");
+});
+
+test("<Score> should mark current player", async () => {
+  const wrapper = factory({
+    store: {
+      victoriesPlayer1: 2,
+      victoriesPlayer2: 3,
+      currentPlayer: "x",
+    },
+  });
+  expect(wrapper.find(".current-player__x").text()).toContain("->");
 });

@@ -1,7 +1,12 @@
 <template>
   <div class="score">
-    <b>Player 1:</b> <span class="victories">{{ victoriesPlayer1 }}</span><br />
-    <b>Player 2:</b> <span class="victories">{{ victoriesPlayer2 }}</span>
+    <span v-if="store.currentPlayer === 'x'" class="current-player__x">-> </span><b>Player 1:</b> 
+    <span class="victories">{{ store.victoriesPlayer1 }}</span>
+
+    <br />
+
+    <span v-if="store.currentPlayer === 'o'" class="current-player__o">-> </span><b>Player 2:</b> 
+    <span class="victories">{{ store.victoriesPlayer2 }}</span>
   </div>
 </template>
 
@@ -9,6 +14,5 @@
 import useStore from './useStore'
 
 const store = useStore()
-const { victoriesPlayer1, victoriesPlayer2 }  = store.value;
 
 </script>

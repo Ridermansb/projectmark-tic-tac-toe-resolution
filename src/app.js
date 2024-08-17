@@ -1,22 +1,10 @@
-import { ref, createApp } from "vue";
+import { createApp } from "vue";
 
 import Game from "./Game.vue";
-import { key } from "./useStore";
+import { key, store } from "./useStore";
 
 const app = createApp(Game);
 
-app.provide(
-  key,
-  ref({
-    currentPlayer: "o",
-    victoriesPlayer1: 0,
-    victoriesPlayer2: 0,
-    board: [
-      ["", "", ""],
-      ["", "", ""],
-      ["", "", ""],
-    ],
-  }),
-);
+app.provide(key, store);
 
 app.mount("#app");
