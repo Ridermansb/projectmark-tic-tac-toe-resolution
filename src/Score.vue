@@ -1,11 +1,15 @@
-
-<script setup>
-const props = defineProps({player1: Number, player2: Number});
-</script>
-
 <template>
   <div class="score">
-    <b>Player 1:</b> <span class="victories">{{ player1 }}</span><br />
-    <b>Player 2:</b> <span class="victories">{{ player2 }}</span>
+    <b>Player 1:</b> <span class="victories">{{ victoriesPlayer1 }}</span><br />
+    <b>Player 2:</b> <span class="victories">{{ victoriesPlayer2 }}</span>
   </div>
 </template>
+
+<script setup>
+import useStore from './useStore'
+
+const store = useStore()
+console.log(">>", store)
+const { victoriesPlayer1, victoriesPlayer2 }  = store.value;
+
+</script>

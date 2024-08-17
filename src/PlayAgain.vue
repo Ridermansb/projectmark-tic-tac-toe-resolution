@@ -1,4 +1,3 @@
-
 <template>
   <button class="play-again">
     Play Again
