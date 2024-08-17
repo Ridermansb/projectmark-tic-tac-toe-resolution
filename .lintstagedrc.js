@@ -1,3 +1,3 @@
 export default {
-  "*.{js,ts}": "vitest related --run",
+  "*.{js,ts}": ["prettier --list-different --write", "vitest related --run"],
 };
