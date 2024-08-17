@@ -1,5 +1,5 @@
 import { mount } from "@vue/test-utils";
-import Tile from "./tile";
+import Tile from "./Tile.vue";
 
 test("<Tile> should display the marker correctly", () => {
   const wrapper = mount(Tile, {
