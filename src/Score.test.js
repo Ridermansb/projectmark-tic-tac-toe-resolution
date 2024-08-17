@@ -1,26 +1,13 @@
-import { reactive } from "vue";
-import { mount } from "@vue/test-utils";
 import Score from "./Score.vue";
-import { store, key } from "./useStore";
-
-function factory({ store: extraStoreOptions, ...options } = { store: {} }) {
-  return mount(Score, {
-    global: {
-      provide: {
-        [key]: reactive({ ...store, ...extraStoreOptions }),
-      },
-    },
-    ...options,
-  });
-}
+import { factory } from "./test-utils";
 
 test("<Score> should always have two elements", () => {
-  const wrapper = factory();
+  const wrapper = factory(Score);
   expect(wrapper.findAll(".victories")).toHaveLength(2);
 });
 
 test("<Score> should match scores within store", () => {
-  const wrapper = factory({
+  const wrapper = factory(Score, {
     store: {
       victoriesPlayer1: 98,
       victoriesPlayer2: 1,
@@ -31,7 +18,7 @@ test("<Score> should match scores within store", () => {
 });
 
 test("<Score> should mark current player", async () => {
-  const wrapper = factory({
+  const wrapper = factory(Score, {
     store: {
       victoriesPlayer1: 2,
       victoriesPlayer2: 3,
