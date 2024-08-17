@@ -14,9 +14,9 @@
   display: inline-block;
   width: 1rem;
   background-color: lightblue;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   text-align: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .game {
@@ -49,14 +49,21 @@
   background-color: lightgray;
 }
 
-.tile:nth-child(1), .tile:nth-child(2),
-.tile:nth-child(4), .tile:nth-child(5),
-.tile:nth-child(7), .tile:nth-child(8) {
+.tile:nth-child(1),
+.tile:nth-child(2),
+.tile:nth-child(4),
+.tile:nth-child(5),
+.tile:nth-child(7),
+.tile:nth-child(8) {
   border-right: 4px solid black;
 }
 
-.tile:nth-child(1), .tile:nth-child(2), .tile:nth-child(3),
-.tile:nth-child(4), .tile:nth-child(5), .tile:nth-child(6) {
+.tile:nth-child(1),
+.tile:nth-child(2),
+.tile:nth-child(3),
+.tile:nth-child(4),
+.tile:nth-child(5),
+.tile:nth-child(6) {
   border-bottom: 4px solid black;
 }
 
@@ -65,7 +72,5 @@
 }
 
 .play-again {
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
-
-

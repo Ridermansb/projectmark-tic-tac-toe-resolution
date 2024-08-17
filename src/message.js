@@ -1,4 +1,4 @@
 export default {
-  props: ['text'],
+  props: ["text"],
   template: `<h1 class="message">{{ text }}</h1>`,
-}
+};

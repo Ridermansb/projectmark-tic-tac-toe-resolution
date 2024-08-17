@@ -1,7 +1,7 @@
-import Score from './score.js';
-import Board from './board.js';
-import Message from './message.js';
-import PlayAgain from './playAgain.js';
+import Score from "./score.js";
+import Board from "./board.js";
+import Message from "./message.js";
+import PlayAgain from "./playAgain.js";
 
 export default {
   template: `
@@ -17,5 +17,5 @@ export default {
     Board,
     Message,
     PlayAgain,
-  }
-}
+  },
+};

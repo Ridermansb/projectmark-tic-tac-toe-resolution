@@ -1,4 +1,4 @@
-import Tile from './tile.js';
+import Tile from "./tile.js";
 
 export default {
   template: `
@@ -21,5 +21,5 @@ export default {
     alert: (index) => {
       window.alert(`Clicked on tile ${index}`);
     },
-  }
-}
+  },
+};

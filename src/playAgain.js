@@ -4,4 +4,4 @@ export default {
       Play Again
     </button>
   `,
-}
+};
