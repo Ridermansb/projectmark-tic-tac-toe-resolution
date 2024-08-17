@@ -9,7 +9,6 @@
 import useStore from './useStore'
 
 const store = useStore()
-console.log(">>", store)
 const { victoriesPlayer1, victoriesPlayer2 }  = store.value;
 
 </script>
