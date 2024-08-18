@@ -25,8 +25,19 @@ const winningCombinations = [
  * const player = "x";
  * console.log(checkWinner(board, player)); // true
  * ```
- * @returns {boolean} True if the player has won the game, false otherwise
+ * @returns {boolean | null} True if the player has won the game, false otherwise or null if the game is still in progress
  */
 export function checkWinner(board, player) {
-  return winningCombinations.some((combination) => combination.every((index) => board[index] === player));
+  const isWinningCombination = winningCombinations.some((combination) =>
+    combination.every((index) => board[index] === player),
+  );
+  const isBoardFull = board.every((tile) => tile !== "");
+
+  if (isWinningCombination) {
+    return true;
+  } else if (isBoardFull) {
+    return false; // It's a draw
+  } else {
+    return null; // Game is still in progress
+  }
 }

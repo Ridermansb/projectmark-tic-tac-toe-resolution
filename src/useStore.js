@@ -25,14 +25,21 @@ export const store = reactive({
   },
   checkWinnerAgainstCurrentPlayer() {
     const currentPlayerWon = checkWinner(this.board, this.currentPlayer);
+
+    // null meaning the game is still in progress
+    if (currentPlayerWon === null) {
+      return;
+    }
+
     if (currentPlayerWon) {
       if (this.currentPlayer === "x") {
         this.victoriesPlayer1++;
       } else {
         this.victoriesPlayer2++;
       }
-
       this.gameFinishedMessage = `Player ${this.currentPlayer === "x" ? "1" : "2"} won!`;
+    } else {
+      this.gameFinishedMessage = `It's a draw!`;
     }
   },
 });

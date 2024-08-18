@@ -18,3 +18,13 @@ test.each([
 ])("checkWinner() where all %s are marked from the same player %s", (board, player, expected) => {
   expect(checkWinner(board, player)).toBe(expected);
 });
+
+test.each([
+  [["", "", "", "", "", "", "", "", ""], "x", null], // Empty board
+  [["x", "", "", "", "", "", "", "", ""], "x", null], // Only one tile marked by "x"
+  [["x", "o", "", "", "", "", "", "", ""], "x", null], // Two tiles marked by "x"
+  [["x", "o", "x", "", "", "", "", "", ""], "x", null], // Three tiles marked by "x" but no winning combination
+  [["x", "o", "x", "", "", "", "", "", ""], "o", null], // Three tiles marked by "o" but no winning combination
+])("checkWinner() where the game is still in progress", (board, player, expected) => {
+  expect(checkWinner(board, player)).toBe(expected);
+});
