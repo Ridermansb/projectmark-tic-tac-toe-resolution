@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest",
-    "test:coverage": "vitest run --coverage",
+    "test:coverage": "vitest run --coverage --reporter=junit",
     "prepare": "husky"
   },
   "author": "Riderman de Sousa Barbosa <ridermansb+projectmark@gmail.com>",

@@ -1,4 +1,4 @@
-[![Vercel Production Deployment](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml)
+[![Vercel Production Deployment](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml/badge.svg)](https://github.com/Ridermansb/projectmark-tic-tac-toe-resolution/actions/workflows/deploy.yml) [![codecov](https://codecov.io/github/Ridermansb/projectmark-tic-tac-toe-resolution/graph/badge.svg?token=UGD19IW11A)](https://codecov.io/github/Ridermansb/projectmark-tic-tac-toe-resolution)
 
 > This is resolution of the [ProjectMark challenge][requirements]
 
