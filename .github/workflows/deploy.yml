@@ -23,6 +23,7 @@ jobs:
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - run: npm ci
+
       - run: npm run test:coverage
 
       - name: Build Project Artifacts
