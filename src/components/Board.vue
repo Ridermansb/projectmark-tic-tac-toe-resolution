@@ -1,7 +1,7 @@
 
 <script setup>
 import Tile from './Tile.vue'
-import useStore from './useStore'
+import useStore from '../useStore'
 const store = useStore();
 </script>
 

@@ -1,5 +1,5 @@
 import Score from "./Score.vue";
-import { factory } from "./test-utils";
+import { factory } from "../test-utils";
 
 test("<Score> should always have two elements", () => {
   const wrapper = factory(Score);

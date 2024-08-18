@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import PlayAgain from "./PlayAgain.vue";
-import { factory } from "./test-utils";
-import { store } from "./useStore";
+import { factory } from "../test-utils";
+import { store } from "../useStore";
 
 beforeEach(() => {
   store.startANewMatch();

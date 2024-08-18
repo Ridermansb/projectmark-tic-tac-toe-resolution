@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import useStore from './useStore'
+import useStore from '../useStore'
 
 const store = useStore()
 

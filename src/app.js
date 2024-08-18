@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 
-import Game from "./Game.vue";
+import Game from "./components/Game.vue";
 import { key, store } from "./useStore";
 
 const app = createApp(Game);

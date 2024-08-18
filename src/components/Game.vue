@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
-import useStore from "./useStore";
+import useStore from "../useStore";
 import Score from "./Score.vue";
 import Board from "./Board.vue";
 import Message from "./Message.vue";

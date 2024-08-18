@@ -1,8 +1,8 @@
-import Board from "./Board.vue";
-import Tile from "./Tile.vue";
-import { factory } from "./test-utils";
+import Board from "../components/Board.vue";
+import Tile from "../components/Tile.vue";
+import { factory } from "../test-utils";
 import { expect } from "vitest";
-import { store } from "./useStore";
+import { store } from "../useStore";
 
 beforeEach(() => {
   store.startANewMatch();
