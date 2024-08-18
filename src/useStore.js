@@ -8,9 +8,11 @@ export const store = reactive({
   victoriesPlayer1: 0,
   victoriesPlayer2: 0,
   board: Array.from({ length: 9 }).fill(""),
+  gameFinishedMessage: false,
   startANewMatch() {
     this.currentPlayer = Math.random() < 0.5 ? "x" : "o";
     this.board = Array.from({ length: 9 }).fill("");
+    this.gameFinishedMessage = false;
   },
   markTile(index) {
     if (this.board[index]) {
@@ -30,7 +32,7 @@ export const store = reactive({
         this.victoriesPlayer2++;
       }
 
-      this.startANewMatch();
+      this.gameFinishedMessage = `Player ${this.currentPlayer === "x" ? "1" : "2"} won!`;
     }
   },
 });

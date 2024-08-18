@@ -3,7 +3,7 @@ import useStore from '../useStore'
 const store = useStore();
 </script>
 <template>
-  <button class="play-again" @click="store.startANewMatch()">
+  <button v-if="!!store.gameFinishedMessage" class="play-again" @click="store.startANewMatch()">
     Play Again
   </button>
 </template>

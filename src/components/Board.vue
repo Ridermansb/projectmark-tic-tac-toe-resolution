@@ -10,7 +10,7 @@ const store = useStore();
     <Tile v-for="(tile, index) in store.board" 
       :marker="tile" 
       :index="index" 
-      :disabled="!!tile"
+      :disabled="!!tile || !!store.gameFinishedMessage"
       @click="store.markTile(index)" 
     />
   </div>

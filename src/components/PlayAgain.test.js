@@ -8,7 +8,13 @@ beforeEach(() => {
 });
 
 test("<PlayAgain> should display the text correctly", () => {
-  const wrapper = mount(PlayAgain);
+  const wrapper = factory(PlayAgain, {
+    store: {
+      board: ["x", "o", "x", "o", "x", "", "x", "", "x", ""],
+      currentPlayer: "",
+      gameFinishedMessage: "Player 1 won!",
+    },
+  });
 
   expect(wrapper.text()).toContain("Play Again");
 });

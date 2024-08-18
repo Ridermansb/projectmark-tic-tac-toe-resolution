@@ -1,12 +1,10 @@
-import { mount } from "@vue/test-utils";
 import Message from "./Message.vue";
+import { factory } from "@/test-utils";
 
 test("<Message> should display the text correctly", () => {
-  const wrapper = mount(Message, {
-    props: {
-      text: "testing",
-    },
+  const wrapper = factory(Message, {
+    store: {},
   });
 
-  expect(wrapper.text()).toContain("testing");
+  expect(wrapper.isVisible()).toBe(false);
 });

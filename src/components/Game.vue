@@ -17,7 +17,7 @@ onMounted(() => {
   <div class="game">
     <Score />
     <Board />
-    <Message :text="'It&rsquo;s a draw'" />
+    <Message />
     <PlayAgain />
   </div>
 </template>
