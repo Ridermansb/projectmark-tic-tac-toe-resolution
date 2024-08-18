@@ -9,6 +9,14 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
+    coverage: {
+      thresholds: {
+        lines: 77,
+        functions: 77,
+        branches: 77,
+        statements: 77,
+      },
+    },
   },
   plugins: [
     vue({
