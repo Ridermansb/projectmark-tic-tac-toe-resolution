@@ -1,5 +1,5 @@
 import { reactive, inject } from "vue";
-import { checkWinner } from "./game";
+import { checkWinner } from "./modules/game";
 
 export const key = Symbol();
 
